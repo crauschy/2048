@@ -1,0 +1,52 @@
+/*#c0dfd9   #b3c2bf*//* #3b3a36 #3fb0ac*/
+
+body {
+  background: #e9ece5;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 18px;
+  color:#3b3a36;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+.description {
+  margin: 10px auto;
+  max-width: 50%;
+}
+
+.description p {
+  text-align: center;
+}
+
+.game-board {
+  border: 2px solid red;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+
+table {
+  border: 2px solid green;
+  background: #b3c2bf;
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  position: relative;
+  padding: 10px;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.25);
+  width:30px;
+  height:30px;
+  border: 2px solid #9eb2ae;
+  border-radius: 8px;
+  font-size: 1.5em;
+  color: #776e65;
+}
+
