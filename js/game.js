@@ -34,6 +34,20 @@ Game.prototype.move = function(direction){
   }
 };
 
+// TODO: GAME MOVES
+// Things to Consider:
+//    * move count shouldn't go up if a move doesn't change the board
+//    * the board cannot be compacted by a move in any direction
+//    *
+
+
+// TODO: Redo Game Over functions
+// Things to Consider:
+//    Game is over WHEN:
+//    * the board is full (there are no empty cells in grid)
+//    * the board cannot be compacted by a move in any direction
+//    *
+
 
 Game.prototype.isOver = function(){
   var boardFull = isFull(this.board);
@@ -191,20 +205,20 @@ var rightDownMath = function(compactBoard){
 
 // INSERT RANDOM returns an updated board (with block spawned)
 // TO-DO: add 4 as an option (a fraction of the time)
-var insertRandom = function(updatedBoard){
-  var boardArray = updatedBoard[0].concat(updatedBoard[1],updatedBoard[2],updatedBoard[3]);
-  var inserted = false;
-  while ( inserted === false ){
-    var randomIndex = Math.floor((Math.random() * 15) + 0);
-    if (boardArray[randomIndex] === "0"){
-      boardArray.splice(randomIndex, 1, "2");
-      inserted = true;
+  var insertRandom = function(updatedBoard){
+    var boardArray = updatedBoard[0].concat(updatedBoard[1],updatedBoard[2],updatedBoard[3]);
+    var inserted = false;
+    while ( inserted === false ){
+      var randomIndex = Math.floor((Math.random() * 15) + 0);
+      if (boardArray[randomIndex] === "0"){
+        boardArray.splice(randomIndex, 1, "2");
+        inserted = true;
+      };
+      // console.log("a block was spawned");
     };
-    // console.log("a block was spawned");
+    var row1 = boardArray.slice(0,4);
+    var row2 = boardArray.slice(4,8);
+    var row3 = boardArray.slice(8,12);
+    var row4 = boardArray.slice(12,16);
+    return [row1, row2, row3, row4];
   };
-  var row1 = boardArray.slice(0,4);
-  var row2 = boardArray.slice(4,8);
-  var row3 = boardArray.slice(8,12);
-  var row4 = boardArray.slice(12,16);
-  return [row1, row2, row3, row4];
-};
