@@ -21,44 +21,46 @@
 <title>2048 Clone!</title>
 </head>
 <body>
-  <h1>2048 Clone!</h1>
-  <div class="description">
-    <p>Can you combine blocks to reach a sum of 2048?</p>
-  </div>
-  <div class="scoreboard">
-    Score: <span id="score">0</span>
-    Moves: <span id="score">0</span>
-  </div>
+  <div class="main-content">
+    <div class="header">
+      <div class="title">
+        <h1>2048 Clone!</h1>
+        <div class="scoreboard"><p>Score</p><span id="score">0</span></div>
+        <div class="scoreboard"><p>Moves</p><span id="moves">12</span></div>
+      </div>
+      <p>Combine blocks to reach a sum of 2048!</p>
+      <button>New Game</button>
+    </div>
 
-  <div class="game-board">
-    <table id="game-grid">
-      <tr>
-      <td id="0">4</td><td id="1">4</td><td id="2">4</td><td id="3">8</td>
-      </tr>
-      <tr>
-      <td id="4">8</td><td id="5">4</td><td id="6">4</td><td id="7">4</td>
-      </tr>
-      <tr>
-      <td id="8">4</td><td id="9">4</td><td id="10">4</td><td id="11">32</td>
-      </tr>
-      <tr>
-      <td id="12">4</td><td id="13">2</td><td id="14">4</td><td id="15">4</td>
-      </tr>
-    </table>
+    <div class="game-board">
+      <table id="game-grid">
+        <tr>
+          <td id="0">4</td><td id="1">4</td><td id="2">4</td><td id="3">8</td>
+        </tr>
+        <tr>
+          <td id="4">8</td><td id="5">4</td><td id="6">4</td><td id="7">4</td>
+        </tr>
+        <tr>
+          <td id="8">4</td><td id="9">4</td><td id="10">4</td><td id="11">32</td>
+        </tr>
+        <tr>
+          <td id="12">4</td><td id="13">2</td><td id="14">4</td><td id="15">4</td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="description">
+      <details>
+        <summary>How to Play</summary>
+        <p class="details">Using the arrow keys on your keyboard or by clicking on the screen, move the numbers up, down, right, or left. Each number will shift blocks in the chosen direction until it runs out of blocks. If it reaches an identical number, those blocks will combine and their sum will be added to your score.<br><br>
+          For example, a row [2][2][4][0] moved RIGHT--> will become [0][0][4][4] <br>
+          ** Notice that the 2's have combined to make a 4, but the new 4 doesn't combine with the existing 4. If RIGHT was chosen again, however, they would combine to make [0][0][0][8].<br><br>
+          Each move also spawns a new [2] in a random empty block. Keep combining to keep the board from filling up and ending the game!<br><br>
+          Once you combine enough for one block to read 2048, you win!
+        </p>
+      </details>
+    </div>
 
   </div>
-  <div class="description">
-    <details>
-      <summary>How to Play</summary>
-      <p class="details">Using the arrow keys on your keyboard or by clicking on the screen, move the numbers up, down, right, or left. Each number will shift blocks in the chosen direction until it runs out of blocks. If it reaches an identical number, those blocks will combine and their sum will be added to your score.<br><br>
-        For example, a row [2][2][4][0] moved RIGHT--> will become [0][0][4][4] <br>
-        ** Notice that the 2's have combined to make a 4, but the new 4 doesn't combine with the existing 4. If RIGHT was chosen again, however, they would combine to make [0][0][0][8].<br><br>
-        Each move also spawns a new [2] in a random empty block. Keep combining to keep the board from filling up and ending the game!<br><br>
-        Once you combine enough for one block to read 2048, you win!
-      </p>
-    </details>
-  </div>
-
-
 </body>
 </html>
