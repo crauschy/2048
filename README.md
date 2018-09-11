@@ -8,8 +8,7 @@ The objective: to build a clone of the game [2048](http://gabrielecirulli.github
 
 ## Status
 
-Now that the logic is sound, I'm working on building out the front-end, keeping in mind the following:
-
+I was offered my first dev job so finishing this has taken a backseat to earning that paycheck, but I will return to this one day soon. :) 
 
 ### Learning Competencies
 
